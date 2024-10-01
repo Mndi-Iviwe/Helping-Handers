@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "IncidentReport";
+}
+
+<h2>Incident Report Form</h2>
+
+<form asp-action="SubmitReport" method="post">
+    <div class="form-group">
+        <label for="AreaName">Country and Area Name</label>
+        <input type="text" class="form-control" id="AreaName" name="AreaName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="DisasterType">Disaster Type</label>
+        <select class="form-control" id="DisasterType" name="DisasterType" required>
+            <option value="Flood">Flood</option>
+            <option value="Earthquake">Earthquake</option>
+            <option value="Fire">Fire</option>
+            <option value="Hurricane">Hurricane</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="DateOfDisaster">Date of Disaster</label>
+        <input type="date" class="form-control" id="DateOfDisaster" name="DateOfDisaster" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea class="form-control" id="Description" name="Description" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="AffectedPopulation">Risk Level</label>
+        <select class="form-control" id="RiskLevel" name="RiskLevel" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="Fire">Fire</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Casualties">Casualties</label>
+        <input type="number" class="form-control" id="Casualties" name="Casualties" required />
+    </div>
+
+    <div class="form-group">
+        <label for="NumVolunteers">Number Of Volunteers</label>
+        <input type="number" class="form-control" id="NumVolunteers" name="NumVolunteers" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Report</button>
+</form>
