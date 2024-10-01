@@ -3,7 +3,7 @@ using Helping_Handers.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace People_Aider.Controllers
+namespace Helping_Handers.Controllers
 {
     public class DonationController : Controller
     {
@@ -14,17 +14,17 @@ namespace People_Aider.Controllers
             _logger = logger;
         }
         // GET: Donation
-        public ActionResult Food()
+        public IActionResult Food()
         {
             return View();
         }
 
-        public ActionResult Clothing()
+        public IActionResult Clothing()
         {
             return View();
         }
 
-        public ActionResult MedicalSupplies()
+        public IActionResult MedicalSupplies()
         {
             return View();
         }

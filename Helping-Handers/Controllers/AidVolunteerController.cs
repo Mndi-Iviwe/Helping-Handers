@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace People_Aider.Controllers
+namespace Helping_Handers.Controllers
 {
     public class AidVolunteerController : Controller
     {
@@ -13,12 +13,12 @@ namespace People_Aider.Controllers
             _logger = logger;
         }
         // GET: AidVolunteer
-        public ActionResult Index()
+        public IActionResult Index()
         {
             return View();
         }
 
-        public ActionResult IncidentAssignment()
+        public IActionResult IncidentAssignment()
         {
             return View();
         }
