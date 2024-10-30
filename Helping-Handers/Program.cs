@@ -1,4 +1,12 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Helping_Handers.Data;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("Helping_HandDbContextConnection") ?? throw new InvalidOperationException("Connection string 'Helping_HandDbContextConnection' not found.");
+
+builder.Services.AddDbContext<Helping_HandDbContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<Helping_User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Helping_HandDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
