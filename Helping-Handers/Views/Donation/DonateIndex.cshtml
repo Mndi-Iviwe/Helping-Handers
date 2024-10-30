@@ -1,20 +1,23 @@
 ﻿
 @{
-    ViewBag.Title = "DonateIndex";
+    ViewData["Title"] = "DonateIndex";
 }
 
-<h2>DonateIndex</h2>
+<h2>@ViewData["Title"]</h2>
 
-<div class="donate_container">
-    <section class="donate_Index_pg">
-        <div class="donate_column" id="foody">
-            <button value="Donate Food" class="btn"></button>
-        </div>
-        <div class="donate_column" id="clothy">
-            <button value="Donate Clothing" class="btn"></button>
-        </div>
-        <div class="donate_column" id="medicy">
-            <button value="Donate Medical Supplies" class="btn"></button>
-        </div>
-    </section>
+<div class="container">
+    <!-- Column 1 -->
+    <div class="column">
+        <button class="button" onclick="window.location.href='@Url.Action("Action1", "Controller")'">Button 1</button>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="column">
+        <button class="button" onclick="window.location.href='@Url.Action("Action2", "Controller")'">Button 2</button>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="column">
+        <button class="button" onclick="window.location.href='@Url.Action("Action3", "Controller")'">Button 3</button>
+    </div>
 </div>

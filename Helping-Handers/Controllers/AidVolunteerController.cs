@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace Helping_Handers.Controllers
 {
+    [Route("[controller]/[action]")]
     public class AidVolunteerController : Controller
     {
         private readonly ILogger<AidVolunteerController> _logger;

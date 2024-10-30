@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 namespace Helping_Handers.Controllers
 {
+    [Route("[controller]/[action]")]
     public class DonationController : Controller
     {
         private readonly ILogger<DonationController> _logger;
@@ -14,6 +15,10 @@ namespace Helping_Handers.Controllers
             _logger = logger;
         }
         // GET: Donation
+        public IActionResult DonateIndex()
+        {
+            return View();
+        }
         public IActionResult Food()
         {
             return View();

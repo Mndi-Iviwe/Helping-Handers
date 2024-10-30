@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace Helping_Handers.Controllers
 {
+    [Route("[controller]/[action]")]
     public class AidUserController : Controller
     {
         private readonly ILogger<AidUserController> _logger;
@@ -13,11 +14,6 @@ namespace Helping_Handers.Controllers
             _logger = logger;
         }
         // GET: AidUser
-
-        public IActionResult DonateIndex()
-        {
-            return View();
-        }
 
 
         public IActionResult IncidentReport()

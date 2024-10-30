@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html {
   font-size: 14px;
 }
@@ -20,3 +26,38 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+
+/* Donate Index and Donation Child CSS*/
+.container {
+    display: flex;
+    width: 185vh;
+    height: 130vh;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+/* Styling for each column */
+.column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+/* Button styling */
+.button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #45a049;
+    }
