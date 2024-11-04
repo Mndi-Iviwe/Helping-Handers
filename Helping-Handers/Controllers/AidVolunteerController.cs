@@ -13,15 +13,22 @@ namespace Helping_Handers.Controllers
         {
             _logger = logger;
         }
+
         // GET: AidVolunteer
-        public IActionResult Index()
+        public IActionResult VolunteerIndex()
         {
+            //Volunteer landing page
+            //If a Volunteers project has been approved by the manager they must await a confirmation
+            //If a volunteer is assigned to a project, it must be displayed here
             return View();
         }
 
-        public IActionResult IncidentAssignment()
+        public IActionResult IncidentApplication()
         {
+            //Volunteer must be able assign themselves to an approved aid project
             return View();
         }
+
+
     }
 }

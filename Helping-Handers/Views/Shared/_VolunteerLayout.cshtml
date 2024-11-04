@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Helping Handers Organisation</title>
+    <title>@ViewData["Title"] - Helping Handers Volunteering Hub</title>
     <link rel="icon" href="~/Images/hands.ico" type="image/x-icon">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
@@ -21,13 +21,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="AidVolunteer" asp-action="VolunteerIndex">Humanitarian Board</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Donation" asp-action="DonateIndex">Donate Today!</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="AidUser" asp-action="IncidentReport">Disaster Report!</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="AidVolunteer" asp-action="IncidentApplication">Application Hub</a>
                         </li>
                     </ul>
                 </div>
@@ -51,3 +48,4 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

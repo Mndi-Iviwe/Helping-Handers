@@ -17,7 +17,7 @@ public class Helping_Volunteer : IdentityUser
     public int vol_age { get; set; }
     public string vol_type { get; set; }
     public string vol_contact { get; set; }
-    public string vol_reason { get; set; }
+    public bool is_assigned { get; set; }
     public string vol_country { get; set; }
 }
 

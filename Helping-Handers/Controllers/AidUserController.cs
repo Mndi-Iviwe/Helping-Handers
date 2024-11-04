@@ -18,6 +18,7 @@ namespace Helping_Handers.Controllers
 
         public IActionResult IncidentReport()
         {
+            //Users must only be able to submit/delete a report
             return View();
         }
     }
