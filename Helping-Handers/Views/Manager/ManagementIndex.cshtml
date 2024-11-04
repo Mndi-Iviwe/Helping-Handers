@@ -1,6 +1,24 @@
-﻿@{
+﻿@model List<Helping_Handers.Models.IncidentReport>
+@{
     ViewData["Title"] = "Humanitarian Management Hub";
     Layout = "~/Views/Shared/_ManagerLayout.cshtml";
 }
 
 <h1>ViewData["Title"]</h1>
+
+<table>
+    <thead>
+        <tr>Country</tr>
+        <tr>Magnitude</tr>
+        <tr>Risk</tr>
+    </thead>
+    
+    <tbody>
+        @foreach(var report in Model)
+        {
+            <td>@report.incident_country</td>
+            <td>@report.incident_magnitude</td>
+            <td>@report.incident_risk</td>
+        }
+    </tbody>
+</table>

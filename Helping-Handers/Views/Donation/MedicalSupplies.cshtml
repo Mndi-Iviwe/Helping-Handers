@@ -1,8 +1,41 @@
 ﻿
 @{
-    ViewBag.Title = "MedicalSupplies";
+    ViewData["Title"] = "Medical Supplies Donation Sector";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Medical Supplies Donation Sector</h2>
+<h2>ViewData["Title"]</h2>
+<form action="/submit-donation" method="POST">
 
+    <!-- Medical Supplies Details -->
+
+    <div class="form-group">
+        <label for="name">Medicine Name</label>
+        <input type="text" id="name" name="med_name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="supply-type">Type of Supplies</label>
+        <select id="supply-type" name="supply_type" required>
+            <option value="masks">Masks</option>
+            <option value="gloves">Gloves</option>
+            <option value="sanitizers">Sanitizers</option>
+            <option value="bandages">Bandages</option>
+            <option value="syringes">Syringes</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Manufacturer">Supply Manufacturer</label>
+        <input type="text" id="manufacturer" name="manufacturer" required>
+    </div>
+
+    
+    <button type="submit" class="btn btn-primary">Submit Donation</button>
+</form>
+<button class="button" onclick="window.location.href='@Url.Action("DonateIndex", "Donation")'">Back</button>

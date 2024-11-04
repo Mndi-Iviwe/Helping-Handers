@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace Helping_Handers.Models
 {
     public class Donation
     {
+        [Key]
         public int donate_ID { get; set; }
         public string donar_name { get; set; }
         public DateTime donate_date { get; set; }

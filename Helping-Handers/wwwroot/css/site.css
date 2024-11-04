@@ -29,7 +29,7 @@ body {
 
 
 
-/* Donate Index and Donation Child CSS*/
+/* Donate Index and Donation Children CSS*/
 .container {
     display: flex;
     width: 185vh;
@@ -47,17 +47,30 @@ body {
     border: 1px solid #ccc;
 }
 
+    .column:hover {
+        transform: scale(1.1);
+    }
+
 /* Button styling */
 .button {
     padding: 15px 30px;
     font-size: 16px;
-    background-color: #4CAF50;
-    color: lightsalmon;
+    background-color: salmon;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
 }
 
     .button:hover {
-        background-color: #45a049;
+        background-color: lightsalmon
     }
+
+
+
+/*FORM STYLING SECTION*/
+
+.form-group {
+    padding: 20px;
+}

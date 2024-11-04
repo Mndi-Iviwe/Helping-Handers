@@ -1,23 +1,23 @@
 ﻿
 @{
-    ViewData["Title"] = "DonateIndex";
+    ViewData["Title"] = "Donate!!";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <div class="container">
     <!-- Column 1 -->
-    <div class="column">
-        <button class="button" onclick="window.location.href='@Url.Action("Food", "Donation")'">Donate Food</button>
+    <div class="column" style="background-image: url('/Images/donatefood.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;transition: transform 0.3s ease;">
+        <button class="button" onclick="window.location.href='@Url.Action("Food", "Donation")'">Donate Food!</button>
     </div>
 
     <!-- Column 2 -->
-    <div class="column">
-        <button class="button" onclick="window.location.href='@Url.Action("MedicalSupplies", "Donation")'">Donate Medical Supplies</button>
+    <div class="column" style="background-image: url('/Images/medicalsupplies.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;transition: transform 0.3s ease;">
+        <button class="button" onclick="window.location.href='@Url.Action("MedicalSupplies", "Donation")'">Donate Medical Supplies!</button>
     </div>
 
     <!-- Column 3 -->
-    <div class="column">
-        <button class="button" onclick="window.location.href='@Url.Action("Clothing", "Donation")'">Button 3</button>
+    <div class="column" style="background-image: url('/Images/donateclothes.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%; height: auto;transition: transform 0.3s ease;">
+        <button class="button" onclick="window.location.href='@Url.Action("Clothing", "Donation")'">Donate Clothes!</button>
     </div>
 </div>

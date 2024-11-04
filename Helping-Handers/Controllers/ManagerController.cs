@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Helping_Handers.Data;
 
 namespace Helping_Handers.Controllers
 {
@@ -7,16 +9,21 @@ namespace Helping_Handers.Controllers
     {
 
         private readonly ILogger<ManagerController> _logger;
+        private readonly Helping_HandDbContext _context;
 
-        public ManagerController(ILogger<ManagerController> logger)
+
+        public ManagerController(Helping_HandDbContext context, ILogger<ManagerController> logger)
         {
+            _context = context;
             _logger = logger;
         }
 
-        public IActionResult ManagementIndex()
+
+        public async Task<IActionResult> ManagementIndex()
         {
             //Submitted reports that have not been approved will only be listed in the index
-            return View();
+            var report = await _context.Reports.ToListAsync();
+            return View(report);
         }
 
         public IActionResult IncidentAssignHub()
