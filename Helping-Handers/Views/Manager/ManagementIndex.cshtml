@@ -16,9 +16,11 @@
     <tbody>
         @foreach(var report in Model)
         {
-            <td>@report.incident_country</td>
-            <td>@report.incident_magnitude</td>
-            <td>@report.incident_risk</td>
+           <tr>
+                <td>@report.incident_country</td>
+                <td>@report.incident_magnitude</td>
+                <td>@report.incident_risk</td>
+            </tr>
         }
     </tbody>
 </table>
