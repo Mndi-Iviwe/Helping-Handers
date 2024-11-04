@@ -7,7 +7,7 @@ namespace Helping_Handers.Models
     public class IncidentAssignment
     {
         [Key]
-        public int assign_ID { get; set; }
+        public int assign_ID { get ; set; }
         public string? assign_role { get; set; }
         public DateTime assign_date { get; set; }
     }

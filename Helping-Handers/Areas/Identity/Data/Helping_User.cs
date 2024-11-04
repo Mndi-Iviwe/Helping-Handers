@@ -12,10 +12,10 @@ public class Helping_User : IdentityUser
 {
     [Key]
     public int user_Id { get; set; }
-    public string firstName { get; set; }
-    public string lastName { get; set; }
-    public string email { get; set; }
-    public string password { get; set; }
-    public int age { get; set; }
+    public string user_firstName { get; set; }
+    public string user_lastName { get; set; }
+    public string user_email { get; set; }
+    public string user_password { get; set; }
+    public int user_age { get; set; }
 }
 
